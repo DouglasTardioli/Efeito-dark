@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #292c35;
+  --light: #f1f1f1;
+  --label: #111;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+
+body.active {
+    background-color: var(--dark);
+}
+
+#sun {
+    display: flex;
+    
+  width: 4.81rem;
+  height: 4.81rem;
+}
+
+#moon {
+    display: flex;
+    
+    
+  width: 4.81rem;
+  height: 4.81rem;
+}
+
+#toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 14.71rem;
+    height: 6.375rem;
+    border-radius: 3.687rem;
+    background-color: var(--label);
+    transition: .5s;
+    
+}
+
+#toggle #indicator {
+    position: absolute;
+    margin-right: 7rem;
+    width: 5.40rem;
+    height: 5.40rem;
+    background-color: var(--light);
+    border-radius: 50%;
+    z-index: 100;
+    transition: .5s;
+}
+
+#toggle.active #indicator {
+    margin-left: 14rem;
+}
